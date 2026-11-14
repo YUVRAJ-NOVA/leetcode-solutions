@@ -6,10 +6,10 @@
 class Solution:
     def reverseList(self, head: ListNode | None) -> ListNode | None:
         prev = None
-        while head is not None:
-            nxt = head.next
-            head.next = prev
-            prev = head
-            head = nxt
-            
+        temp = head
+        while temp is not None:
+            nxt = temp.next
+            temp.next = prev
+            prev = temp
+            temp = nxt
         return prev
